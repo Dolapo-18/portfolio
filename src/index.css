@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-line: var(--line);
+  --color-danger: var(--danger);
+}
+
+:root {
+  --canvas: #f3f6fb;
+  --surface: #ffffff;
+  --ink: #101828;
+  --muted: #3d4c63;
+  --accent: #0c4f59;
+  --accent-foreground: #f3fffc;
+  --accent-soft: #e5f4f6;
+  --line: #d5dee8;
+  --danger: #9f1239;
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: #070b14;
+  --surface: #101828;
+  --ink: #eef3f8;
+  --muted: #c5d0de;
+  --accent: #7ef0dc;
+  --accent-foreground: #042f2e;
+  --accent-soft: rgba(126, 240, 220, 0.12);
+  --line: rgba(238, 243, 248, 0.14);
+  --danger: #fecdd3;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.25rem;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 28%, transparent);
+    color: var(--ink);
+  }
+}
+
+.hero-backdrop {
+  background:
+    radial-gradient(ellipse 55% 42% at 88% 0%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 68%),
+    linear-gradient(to right, color-mix(in srgb, var(--ink) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 5%, transparent) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+  mask-image: linear-gradient(to bottom, black 35%, transparent 95%);
+}
+
+.band {
+  background: color-mix(in srgb, var(--ink) 3.5%, var(--canvas));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.7s ease both;
+  }
+
+  .rise-delay {
+    animation-delay: 0.08s;
+  }
+
+  .card-lift {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

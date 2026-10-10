@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <rect width="800" height="1000" fill="#0C1424"/>
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#1C3148" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#grid)"/>
+  <circle cx="620" cy="180" r="180" fill="#122033"/>
+  <circle cx="170" cy="860" r="210" fill="#101B2C"/>
+  <circle cx="400" cy="430" r="210" stroke="#7EF0DC" stroke-opacity="0.18"/>
+  <circle cx="400" cy="430" r="156" stroke="#7EF0DC" stroke-opacity="0.55"/>
+  <path d="M250 430h300" stroke="#7EF0DC" stroke-opacity="0.35"/>
+  <text x="400" y="458" text-anchor="middle" fill="#7EF0DC" font-family="Arial, Helvetica, sans-serif" font-size="120" font-weight="700">DO</text>
+  <text x="400" y="760" text-anchor="middle" fill="#EEF3F8" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="3">DOLAPO OGUNYEMI</text>
+  <text x="400" y="802" text-anchor="middle" fill="#C5D0DE" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="2">SOFTWARE ENGINEER</text>
+</svg>
