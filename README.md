@@ -6,7 +6,7 @@ Personal portfolio for Dolapo Ogunyemi, a software engineer and application supp
 
 Replace the placeholders below. The site is built to show them clearly rather than invent missing details.
 
-- [ ] `src/data/profile.ts` — professional email, LinkedIn URL, and GitHub URL
+- [x] `src/data/profile.ts` — email, LinkedIn, GitHub, and Lagos, Nigeria
 - [x] Profile photograph — `src/assets/profile_image.png`, shown in the hero
 - [x] Resume — `public/Resume-Dolapo-Ezekiel-Ogunyemi.pdf`, linked from Download Resume
 - [ ] `src/data/experience.ts` — job titles and employment dates. They stay hidden until you replace the placeholder text. Employer is Linkage Assurance Plc
